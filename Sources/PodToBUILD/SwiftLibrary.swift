@@ -255,7 +255,7 @@ public struct SwiftLibrary: BazelTarget {
                 .named(name: "copts", value: coptsSkylark),
                 .named(name: "swiftc_inputs", value: swiftcInputs.toSkylark()),
                 .named(name: "generated_header_name", value: (externalName + "-Swift.h").toSkylark()),
-                .named(name: "generates_header", value: true.toSkylark()),
+                .named(name: "generates_header", value: 1.toSkylark()),
                 .named(name: "features", value: ["swift.no_generated_module_map"].toSkylark()),
                 .named(name: "visibility", value: ["//visibility:public"].toSkylark()),
             ]
